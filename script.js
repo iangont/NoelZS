@@ -1,9 +1,8 @@
-// Compte à rebours jusqu'à Noël
+// Compte à rebours simplifié
 function countdown() {
     const now = new Date();
     const christmas = new Date(now.getFullYear(), 11, 25); // 25 décembre
-    const difference = christmas - now;
-    const days = Math.floor(difference / (1000 * 60 * 60 * 24));
+    const days = Math.ceil((christmas - now) / (1000 * 60 * 60 * 24));
     document.getElementById('days').textContent = days;
 }
 
