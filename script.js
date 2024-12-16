@@ -11,3 +11,10 @@ countdown();
 
 // Mettre à jour le compte à rebours toutes les heures
 setInterval(countdown, 1000 * 60 * 60);
+
+// Vérifier si l'utilisateur est sur un appareil mobile
+const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+
+if (isMobile) {
+    document.getElementById('mobile-message').style.display = 'block';
+}
